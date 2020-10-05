@@ -28,3 +28,30 @@ T gcd(T a, T b, T& x, T& y) {
 }
 
 // refernce = https://cp-algorithms.com/algebra/extended-euclid-algorithm.html
+
+####### python 3.8.2 #######
+
+def GCD(a, b, x, y):
+    if b == 0:
+        x = 1
+        y = 0
+        return(x, y)
+    A, B = GCD(b, a % b, x, y)
+    x = B
+    y = A-B*(a//b)
+    return(x, y)
+
+# iterative form
+
+
+def GCD(a, b, x, y):
+    x = 1
+    y = 0
+    x1, y1, a1, b1 = 0, 1, a, b
+    while(b1):
+        q = a1//b1
+        x, x1 = x1, x-q*x1
+        y, y1 = y1, y-q*y1
+        a1, b1 = b1, a1-q*b1
+    return(x, y)
+
