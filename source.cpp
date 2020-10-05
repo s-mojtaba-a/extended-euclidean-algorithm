@@ -31,12 +31,12 @@ T gcd(T a, T b, T& x, T& y) {
 
 ####### python 3.8.2 #######
 
-def GCD(a, b, x, y):
+def GCD(a, b):
     if b == 0:
         x = 1
         y = 0
         return(x, y)
-    A, B = GCD(b, a % b, x, y)
+    A, B = GCD(b, a % b)
     x = B
     y = A-B*(a//b)
     return(x, y)
@@ -44,7 +44,7 @@ def GCD(a, b, x, y):
 # iterative form
 
 
-def GCD(a, b, x, y):
+def GCD(a, b):
     x = 1
     y = 0
     x1, y1, a1, b1 = 0, 1, a, b
@@ -55,3 +55,4 @@ def GCD(a, b, x, y):
         a1, b1 = b1, a1-q*b1
     return(x, y)
 
+## a should be bigger than b
