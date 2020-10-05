@@ -55,4 +55,3 @@ def GCD(a, b):
         a1, b1 = b1, a1-q*b1
     return(x, y)
 
-## a should be bigger than b
