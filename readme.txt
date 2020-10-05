@@ -7,7 +7,7 @@ There are some facts :
   
 Proof of correctness of algorithm : 
 
-  1- A*x0 + B*y0 = gcd(A,B) (( A must be bigger than B )) 
+  1- A*x0 + B*y0 = gcd(A,B) (( There is no need for A to be bigger than B. I will proove it in the future)) 
   2- B*x1 + (A%B)*y1 = gcd(B,A%B) = gcd(A,B)
   3- from 2* , we can write equation 2 as : B*(x1) + (A-(A//B)*B)*y1 = gcd(A,B)
   4- after some simple works , we get : A*y1 + B*(x1-(A//B)*y1) = gcd(A,B)
@@ -19,3 +19,8 @@ Proof of correctness of algorithm :
   9- In the base case , the equation would be A*xn + 0*yn = gcd(A,0)=gcd(A,B) (( two A's differ !! )). In this case xn must be 1 and yn can be any arbitrary integer. For each
     yn , we will get unique x0 and y0 .For example our x0 and y0 can be 1 and 4 when our yn is 0 and they can be 8 and -2 when our yn is 4 .
   
+Now the proof for that A can be smaller than B :
+
+  1- we have gcd(A,B) = gcd(B,A%B) .
+  2- if A < B , then A%B = A .
+  3- So in the first step, the algorithm will atomatically change A and B and will assign the max(A,B) to A.
