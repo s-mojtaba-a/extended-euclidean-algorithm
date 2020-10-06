@@ -7,7 +7,7 @@ There are some facts :
   
 Proof of correctness of algorithm : 
 
-  1- A*x0 + B*y0 = gcd(A,B) (( There is no need for A to be bigger than B. I will proove it in the future)) 
+  1- A*x0 + B*y0 = gcd(A,B) (( There is no need for A to be bigger than B. I will prove it in the future)) 
   2- B*x1 + (A%B)*y1 = gcd(B,A%B) = gcd(A,B)
   3- from 2* , we can write equation 2 as : B*(x1) + (A-(A//B)*B)*y1 = gcd(A,B)
   4- after some simple works , we get : A*y1 + B*(x1-(A//B)*y1) = gcd(A,B)
